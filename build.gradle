@@ -1,0 +1,54 @@
+buildscript {
+	repositories {
+		mavenCentral()
+		jcenter()
+	}
+
+	dependencies {
+		classpath('org.springframework.boot:spring-boot-gradle-plugin:2.0.5.RELEASE')
+	}
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+
+repositories {
+	mavenCentral()
+	jcenter()
+}
+
+
+
+dependencies {
+    
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'org.springframework.boot:spring-boot-starter-data-rest'
+	//implementation 'org.springframework.boot:spring-boot-starter-security'
+	implementation 'org.springframework.boot:spring-boot-starter-validation'
+	//implementation 'org.springframework.security:spring-security-core'
+	implementation 'com.fasterxml.jackson.core:jackson-annotations'
+	implementation 'com.fasterxml.jackson.core:jackson-databind'
+	implementation 'com.fasterxml.jackson.dataformat:jackson-dataformat-xml'
+	implementation 'javax.persistence:javax.persistence-api:2.+'
+	implementation 'javax.xml.bind:jaxb-api'
+	implementation 'com.h2database:h2'	
+	//implementation 'org.joda:joda-money'
+	implementation 'joda-time:joda-time'
+	
+
+	//testImplementation 'junit:junit:4.+'
+	testCompile 'org.springframework.boot:spring-boot-starter-test' 
+	testCompile 'org.junit.jupiter:junit-jupiter-api'
+	testCompile 'org.junit.jupiter:junit-jupiter-params'
+	testRuntime 'org.junit.jupiter:junit-jupiter-engine'
+
+	testCompile 'org.mockito:mockito-core'
+	testCompile 'org.mockito:mockito-junit-jupiter:2.+'
+
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '4.3.1'
+}
