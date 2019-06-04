@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Place</title>
+	<meta charset="UTF-8">
+	<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js'></script>
+    <script type='text/javascript' src='http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js'></script>
+	<script type='text/javascript' src="http://www.openlayers.org/api/OpenLayers.js"></script>
+	<script type="text/javascript" src="js/place.js"></script>
+</head>
+<body onload="loadPlaceInfo();">
+
+<div id="d_placeInfo">
+	<table id="t_placeInfo" border="1">
+		<thead>
+			<tr>
+				<th><div id="idName"></div></th>
+				<th><div id="idAddress"></div></th> 
+				<th>permanently closed: <div id="idPermanentlyClosed"></div></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>phone</td>
+				<td><div id="idPhone"></div></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>priceRange</td>
+				<td><div id="idPriceRange"></div></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Overall star rating</td>
+				<td><div id="idOverall_star_rating"></div></td>
+				<td></td>
+			</tr>	
+			<tr>
+				<td>Rating count</td>
+				<td><div id="idRating_count"></div></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>categoryList</td>
+				<td><div id="idCategoryList"></div></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Open hours</td>
+				<td>is always open</td>
+				<td><div id="is_always_open"></div></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>Sunday</td>
+				<td><div id="idSunday"></div></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>Monday</td>
+				<td><div id="idMonday"></div></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>Tuesday</td>
+				<td><div id="idTuesday"></div></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>Wednesday</td>
+				<td><div id="idWednesday"></div></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>Thursday</td>
+				<td><div id="idThursday"></div></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>Friday</td>
+				<td><div id="idFriday"></div></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>Saturday</td>
+				<td><div id="idSaturday"></div></td>
+			</tr>
+			<tr>
+				<td>link</td><td>
+				<div id="idLink"></div></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>group friendly</td>
+				<td><div id="idGroupFriendly"></div></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>kids friendly</td>
+				<td><div id="idKidsFriendly"></div></td>
+				<td></td>
+			</tr>
+		</tbody>
+		<tfoot>
+			<tr>
+				<td>About:</td>
+				<td><div id="idAbout"></div></td>
+			</tr>
+			<tr>
+				<td>Description:</td>
+				<td><div id="idDescription"></div></td>
+			</tr>
+		<tfoot>
+	</table>
+	
+	<br><br>
+	
+	<table id="t_mapInfo">
+		<thead>
+			<tr>
+				<th>Cover picture:</th>
+				<th>Map:</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><div id="idCoverPicture"></div></td>
+				<td><div id="idPlaceOnMap" style="width: 800px; height: 440px; border: 1px solid #AAA;"></div></td>
+			</tr>
+		</tbody>
+	</table>
+
+	
+</div>
+
+
+</body>
+</html>

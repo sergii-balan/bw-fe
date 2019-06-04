@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bars Around Places</title>
+	<meta charset="UTF-8">
+</head>
+<body>
+
+<script type="text/javascript" src="js/loadPlaces.js"></script>
+
+Radius (m): <input type="text" id="idRadius" onchange="cleanAll()" value="500">
+<br>
+<br>
+Coordinates (lat,lng): <input type="text" id="idLatitude" onchange="cleanAll()" value="56.946285">, <input type="text" id="idLongitude" onchange="cleanAll()" value="24.10507">
+<br>
+<br>
+Fields list: <input type="text" id="idFields" onchange="cleanAll()" value="ALL">
+<br>
+<br>
+<button id="idLoadButton" onclick="populateTable('/fb/places/search/drink')">Load places</button>
+<br>
+<br>
+
+<h2>Drink Places</h2>
+<div id="places">
+	<table id="t_places" border="1">
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>Name</th>
+				<th>Address</th>
+				<th>FB page</th>
+				<th>Web site</th>
+			</tr>
+		</thead>
+		<tbody></tbody>
+		<tfoot>
+		<tfoot>
+	</table>
+</div>
+
+</body>
+</html>
